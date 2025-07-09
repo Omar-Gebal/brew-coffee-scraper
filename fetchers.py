@@ -68,7 +68,6 @@ def get_all_products() -> list:
       response.raise_for_status()
       hits = response.json()["data"]["search"]["products"]["hits"]
       if not hits:
-        print(hits)
         break
 
       all_products.extend(hits)
@@ -76,6 +75,4 @@ def get_all_products() -> list:
 
       # delay to avoid overloading the server
       time.sleep(0.5)
-
-  print(f"total products fetched: {len(all_products)}")
   return all_products
