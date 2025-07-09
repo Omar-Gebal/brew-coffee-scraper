@@ -76,3 +76,25 @@ def get_all_products() -> list:
       # delay to avoid overloading the server
       time.sleep(0.5)
   return all_products
+
+def get_product_details(id: int):
+  url = f"https://lambda.ribon.ca/api/v2/6h7ychjk4/v3/catalog/products/{id}"
+  headers = {
+    'accept': '*/*',
+    'accept-language': 'en-US,en;q=0.9',
+    'if-none-match': 'W/"16c3-khC5e8x37PMUF70rBGkBuYuo5co"',
+    'origin': 'https://prima-coffee.com',
+    'priority': 'u=1, i',
+    'referer': 'https://prima-coffee.com/',
+    'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Linux"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'cross-site',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36'
+  }
+
+  response = requests.request("GET", url, headers=headers)
+  response.raise_for_status()
+  return response.json()
