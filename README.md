@@ -31,10 +31,10 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python scrape_prima_brew_data.py
+python main.py
 ```
 
-The script will fetch and save the coffee brew data to `prima_brew_data.json` or `prima_brew_data.csv` (configurable inside the script).
+The script will fetch and save the coffee brew data to `sorted-products.json` and `5-cheapest-products.json` (configurable inside the script).
 
 ## Notes
 
