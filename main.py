@@ -22,7 +22,7 @@ def main():
                 "title": product["name"]
             }
         )
-    with open("products.json", "w", encoding="utf-8") as f:
+    with open("sorted-products.json", "w", encoding="utf-8") as f:
         json.dump(formatted_products, f, ensure_ascii=False, indent=2)
     
     #Exporting cheapest 5 products in complete detail
