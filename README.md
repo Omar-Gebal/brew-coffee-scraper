@@ -14,7 +14,7 @@ A simple Python scraper that reverse engineers the API of [prima-coffee.com](htt
 
 ## Setup
 
-1️⃣ **Clone the repository:**
+1️⃣ **Clone the repository:**<br>
 2️⃣ **(Optional) Create and activate a virtual environment:**
 
 ```bash
